@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>회원가입 페이지</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='user.css') }}">
+</head>
+<body>
+	<h1>Sign Up to SKY Chat</h1>
+	<form method="post" action="{{ url_for('signup') }}">
+		<label>NickName</label>
+		<input type="text" name="nickname" autocomplete="off" required>
+		<br>
+		<label>Email</label>
+		<input type="email" name="email" autocomplete="off" required>
+		<br>
+		<label>PassWord</label>
+		<input type="password" name="password" autocomplete="off" required>
+		{% if error == "None" %}
+			
+		{% else %}
+			<a class="errorMessage">{{ error }}</a>
+		{% endif %}
+		<br>
+		<button type="submit">▶ SignUp</button>
+		<br><br>
+		<a href="/login">Login to SKY Chat</a> 
+	</form>
+</body>
+</html>

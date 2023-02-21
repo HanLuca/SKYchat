@@ -1,0 +1,39 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlaskChat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function updateScroll() {
+            var element = document.getElementById("chat");
+            element.scrollTop = element.scrollHeight;
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                console.log("ddd")
+                document.getElementById("message").focus();
+            }
+        });
+    </script>
+  </head>
+  <body onload="updateScroll()">
+    <div id="wrapper">
+      <div id="chat">
+        {% for message in messages %}
+        <div class="message">
+          <span class="timestamp">{{ message['timestamp'] }}</span>
+          <span class="name">{{ message['name'] }}</span><br>
+          <span class="content">{{ message['message'] }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <form method="POST" action="/send_message">
+      <input type="text" id="message" name="message" placeholder="메세지를 입력하세요" autocomplete="off" required>
+      <button type="submit"></button>
+    </form>
+  </body>
+</html>

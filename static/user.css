@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+h1 {
+    text-align: center;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button[type="submit"], button[type="button"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+a[href="/signup"], a[href="/login"] {
+    text-decoration : none;
+    color: black;
+    font-size: 15px;
+}
+
+a[href="/signup"]:visited, a[href="/login"]:visited {
+    text-decoration : none;
+    color: black;
+    font-size: 15px;
+}
+
+a[href="/signup"]:hover, a[href="/login"]:hover {
+    text-decoration : none;
+    color: blue;
+    font-size: 15px;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 10px;
+}

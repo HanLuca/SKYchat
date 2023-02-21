@@ -1,0 +1,49 @@
+/* static/style.css */
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#chat {
+  height: 400px;
+  width: 500px;
+  overflow-y: scroll;
+  margin: 0 auto; /* 가운데 정렬 */
+  background-color: #fff ;
+  padding: 10px
+}
+
+.message {
+  margin: 10px 0;
+}
+
+.timestamp {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.name {
+  font-weight: bold;
+  color: #0070c0;
+}
+
+.content {
+  margin-left: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  margin-top: 10px; /* 위쪽 여백 추가 */
+}
+
+form input[type="text"] {
+  width: 500px;
+  height: 20px;
+}
+
+form button {
+  width: 10px;
+}
